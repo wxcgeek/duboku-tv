@@ -24,7 +24,7 @@ public class TVduboku {
             "       video.scrollIntoView();" +
             //Failed to execute 'requestFullScreen' on 'Element': API can only be initiated by a user gesture.
             //"       if(video.requestFullScreen) video.requestFullscreen();\n" +
-            "       if(document.querySelector('a[class=btnskin]')) document.querySelector('a[class=btnskin]').click();" +
+            //"       if(document.querySelector('a[class=btnskin]')) document.querySelector('a[class=btnskin]').click();" +
             "       const container = document.querySelector('body > div.row');" +
             "       if(container) container.style = 'height: auto !important; padding-left:0px !important; padding-right:0px !important';" +
             "       const div = document.querySelector('body > div.row > div > div');" +
