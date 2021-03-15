@@ -25,9 +25,9 @@ public class TVduboku {
             //Failed to execute 'requestFullScreen' on 'Element': API can only be initiated by a user gesture.
             //"       if(video.requestFullScreen) video.requestFullscreen();\n" +
             //"       if(document.querySelector('a[class=btnskin]')) document.querySelector('a[class=btnskin]').click();" +
-            "       const container = document.querySelector('body > div.row');" +
+            "       const container = document.querySelector('body > div.container');" +
             "       if(container) container.style = 'height: auto !important; padding-left:0px !important; padding-right:0px !important';" +
-            "       const div = document.querySelector('body > div.row > div > div');" +
+            "       const div = document.querySelector('body > div.container > div > div');" +
             "       if(div) div.style = 'width: 100% !important; height: auto !important;';" +
             "       if(video.webkitRequestFullScreen) video.webkitRequestFullScreen();\n" +
             "       return 'video-start-' + new Date().toISOString()\n" +
@@ -113,15 +113,15 @@ public class TVduboku {
     public static final String JsLoadMeta = "(function() {\n" +
             "    const dramas = [];\n" +
             "    const now = new Date().toISOString();\n" +
-            "    document.querySelectorAll('div.myui-panel.myui-panel-bg > div.myui-panel-box').forEach(dom => {\n" +
+            "    document.querySelectorAll('div.stui-pannel.stui-pannel-bg > div.stui-pannel-box').forEach(dom => {\n" +
             "        const title = dom.querySelector('div.myui-panel__head > h3.title');\n" +
             "        const more = dom.querySelector('div.myui-panel__head > a.more');\n" +
-            "        dom.querySelectorAll('ul.myui-vodlist > li > div > a').forEach(a => {\n" +
+            "        dom.querySelectorAll('ul.stui-vodlist > li > div > a').forEach(a => {\n" +
             "            dramas.push({ \n" +
             "                title: a.title, \n" +
             "                url: a.href, \n" +
             "                image: a.getAttribute('data-original'),\n" +
-            "                tag: a.querySelector('span.tag') ? a.querySelector('span.tag').innerText : '',\n" +
+            "                tag: a.querySelector('span.pic-text') ? a.querySelector('span.pic-text').innerText : '',\n" +
             "                picText: a.querySelector('span.pic-text').innerText,\n" +
             "                category: title ? title.innerText: '',\n" +
             "                moreUrl: more ? more.href: '',\n" +
